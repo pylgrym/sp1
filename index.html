@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <style>
+    
+    br {
+      background: cyan;
+      margin-bottom: 10px;      
+      display: inline-block;
+      width: 5px; height: 5px;
+      border: 5px solid red;
+    }
+
+    br::after { /* weirdly, this does not work */
+      content: "Z";
+      color: red;
+      font-weight: bold;
+    }
+
+    body {
+      max-width: 50ch;
+      margin: 0px auto; 
+      font-size: clamp(1rem, 2vw, 1.5rem);    
+      font-family: Eczar;
+      line-height: 1.2;
+    }
+
+  </style>
+
+<lank rel="preconnect" href="https://fonts.googleapis.com">
+<lank rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<p>
+I would like to be able to mix and match them. That is, I would like to have a set of raw sources
+and a 'recipe' list, then run a tool to build a combined tileset image.
+
+a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a     1 2 3 4
+</p>
+
+<pres>
+
+About Tilesets.   
+<br>
+
+
+I would like to be able to mix and match them.
+That is, I would like to have a set of raw sources
+and a 'recipe' list,
+then run a tool to build a combined tileset image.
+<br>
+
+It might be more structured to combine this with
+a json tag index of the tiles,
+so the raw container image is accompanied by
+indexed name tags.
+<br>
+
+This would avoid having to hardcode the positions or indices
+of the individual tiles, which would be likely to
+jumble around as you update the selected subset.
+<br>
+
+Ironically, the things I appear to want to do here,
+appear to be already supported by the popular free tool
+<br>
+
+Tiled (Tile-D/Til-ED).
+<br>
+
+
+------------
+<br>
+
+Anyway, for actual tiles, the priority 
+would be an 'empty floor grid square', 
+ie probably with some kind of vague grid border visible.
+A priority for the 'empty floor' is,
+that is should be as inconspicious and not-noisy as possible.
+<br>
+
+The second priority would be some kind of wall/rock thing,
+which should be able to tile in a pleasant way
+(ie, when you use it for longer clustered sections of wall).
+<br>
+
+The third priority would be any kind of resource or object,
+e.g. "pacman pills to gather".
+<br>
+
+A priority at the same level would be some kind of 'goal marker'
+/ prized item/treasure (something less common than the
+'pacman pills').
+<br>
+
+Next, one might _consider_ creatures, mobs, npcs or player
+of some kind, but those don't really necessarily belong in the
+tilemap as such, they should probably be on some kind
+of sprite sheet, 
+unless it is all pooled together (which may make sense).
+<br>
+
+Further posibilities would be actual 'functional'
+map-environment entities, like doors, traps, locks, stairs.
+Things that either affect navigation or activities/abilities.
+<br>
+
+
+
+
+
+
+
+
+
+</pre>
+
+</body>
+</html>
